@@ -1,20 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-error',
   template: `
-    <p>
-      error works!
-    </p>
-  `,
-  styles: [
-  ]
+    <div
+      className="bg-red-800 text-white text-center p-3 uppercase font-bold mb-3 rounded-md"
+    >
+      {{ message }}
+    </div>
+  `
 })
-export class ErrorComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class ErrorComponent {
+  @Input() message!: string;
 }
