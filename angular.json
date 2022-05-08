@@ -125,9 +125,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "app-medical-appointments"
+  "defaultProject": "app-medical-appointments",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
